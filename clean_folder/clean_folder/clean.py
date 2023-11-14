@@ -1,7 +1,4 @@
-﻿import pathlib                    # import pathlib -> home_dir => pathlib.Path.home()
-
-# from pathlib import Path        # from pathlib import Path => home_dir = Path.home()
-# from pathlib import *           # from pathlib import *  => current_dir = Path.cwd()
+﻿import pathlib  
 import shutil
 
 CYRILLIC_SYMBOLS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяєіїґ"
@@ -101,10 +98,6 @@ def move_files(path):
             stem = normalize(file.stem)
             #print(f"  normalize: {file.stem=} -> {stem=}")
             newname = (path/categ/(stem+file.suffix) if categ !='unknown' else file.parent/(stem+file.suffix))
-            # if (categ != 'unknown'):
-            #     newname = path / categ / (stem + file.suffix)           
-            # else:
-            #     newname = file.parent / (stem + file.suffix) 
             print(f" =>{newname=}")
             file.replace(newname)    # .replace(newname) doesn't need try..except
 
@@ -152,11 +145,8 @@ def main():
     # if len(sys.argv) < 2:
     #     print("ERROR: working directory not specified")
     #     exit()
-
     # workpath = pathlib.Path(sys.argv[1])
-    workpath = pathlib.Path(r"d:/PYTHON/HomeWorks/Modul06/trash/")
     # print(f"'{workpath=}'  {workpath.exists()=}\n")
-    # #'workpath=WindowsPath('e:/PROG/PYTHON/GoIt homeworks/HW1(Modul6)/trash')'
     if not workpath.exists():
         print(f"ERROR: working directory '{workpath}' not exist")
         exit()
@@ -173,5 +163,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# nothing personal
-# nothing extra
