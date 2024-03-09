@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "contactsbook"
+version = "0.1.0"
+description = "hw14"
+authors = ["SobkoSergiy <integral2003@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.2.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
